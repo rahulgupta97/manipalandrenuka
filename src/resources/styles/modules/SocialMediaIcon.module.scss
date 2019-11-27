@@ -1,0 +1,41 @@
+.socialMedia {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: #333;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    height: 60px;
+}
+
+.igIcon {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background: black;
+    margin: 10px;
+}
+
+.inIcon {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background: black;
+    margin: 10px;
+}
+
+.imgWrapper {
+    padding-top: 8.5px;
+}
+
+
+/* Animations */
+.igIcon:hover {
+    background: rgba(182, 114, 214, 0.801);
+}
+
+.inIcon:hover {
+    background: rgb(75, 169, 224);
+}

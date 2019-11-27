@@ -1,0 +1,57 @@
+.contentWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Components */
+
+$sectionHeight: 100vh;
+$sectionWidth: 100%;
+$sectionPosition: relative;
+
+.section1 {
+    height: $sectionHeight;
+    width: $sectionWidth;
+    position: $sectionPosition;
+}
+
+.section2 {
+    height: $sectionHeight;
+    width: $sectionWidth;
+    position: $sectionPosition;
+    background-color: #33ccff;
+}
+
+.section3 {
+    height: $sectionHeight;
+    width: $sectionWidth;
+    position: $sectionPosition;
+    background-color: #33ccff;
+}
+
+
+/* section-1 elements */
+
+.firstGlance {
+
+}
+
+
+/* section-2 elements */
+
+.bio_mr {
+    height: $sectionHeight;
+    width: $sectionWidth;
+}
+
+
+/* section-3 elements */
+
+.bio_rr {
+    height: $sectionHeight;
+    width: $sectionWidth;
+}
