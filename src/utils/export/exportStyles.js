@@ -10,3 +10,5 @@ export { default as GalleryStyles } from '../../resources/styles/components/Gall
 export { default as SocialMediaIconStyles } from '../../resources/styles/modules/SocialMediaIcon.module.scss';
 export { default as NavigationStyles } from '../../resources/styles/modules/Navigation.module.scss';
 export { default as ArrowScrollableStyles } from '../../resources/styles/modules/ArrowScrollable.module.scss';
+export { default as OverviewIconStyles } from '../../resources/styles/modules/OverviewIcon.module.scss';
+export { default as ImageCollageStyles } from '../../resources/styles/modules/ImageCollage.module.scss';

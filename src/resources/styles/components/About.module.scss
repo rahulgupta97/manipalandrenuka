@@ -10,48 +10,96 @@
 /* Components */
 
 $sectionHeight: 100vh;
+$bigSectionHeight: 400vh;
 $sectionWidth: 100%;
 $sectionPosition: relative;
+$webkitboxdisplay: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+$mozboxdisplay: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+$msflexboxdisplay: -ms-flexbox; /* TWEENER - IE 10 */
+$webkitflexdisplay: -webkit-flex; /* NEW - Chrome */
+$sectiondisplay: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+$flexdirection: column;
 
 .section1 {
     height: $sectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
+
 }
 
 .section2 {
-    height: $sectionHeight;
+    height: $bigSectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
-    background-color: #33ccff;
+    background-color: #333;
+    text-align: center;
+    align-items: center;
+    font-family: Roboto;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
 }
-
-.section3 {
-    height: $sectionHeight;
-    width: $sectionWidth;
-    position: $sectionPosition;
-    background-color: #33ccff;
-}
-
 
 /* section-1 elements */
 
 .firstGlance {
-
+    background-image: url("../../images/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0% 40%;
+    height: $sectionHeight;
+    width: $sectionWidth;
 }
 
 
 /* section-2 elements */
 
-.bio_mr {
-    height: $sectionHeight;
-    width: $sectionWidth;
+.titleDiv {
+    padding-top: 10vh;
+    padding-bottom: 20vh;
 }
 
+.nameTitle {
+    font-size: 6vh;
+    font-weight: lighter;
+    color: white;
+}
 
-/* section-3 elements */
+.aboutIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300vh;
+}
 
-.bio_rr {
-    height: $sectionHeight;
-    width: $sectionWidth;
+.aboutIconContainer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutIconImg {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.aboutIconDesc {
+    padding: 30px;
 }

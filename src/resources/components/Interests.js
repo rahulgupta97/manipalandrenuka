@@ -1,7 +1,8 @@
 import React from 'react';
-import { SocialMediaIcon, ArrowScrollable, Navigation } from '../../utils/export/exportModules';
+import { SocialMediaIcon, ArrowScrollable, Navigation, ImageCollage } from '../../utils/export/exportModules';
 import { Helper } from '../../utils/export/exportHelpers';
-import { ContentStyles, InterestsStyles } from '../../utils/export/exportStyles';
+import { InterestsStyles } from '../../utils/export/exportStyles';
+import labels from '../labels/Labels.json';
 
 export default class Interests extends React.Component {
     render() {
@@ -14,16 +15,28 @@ export default class Interests extends React.Component {
                         <ArrowScrollable />
                     </div>
                     <div className={InterestsStyles.section2}>
-                        <div className={InterestsStyles.interests}>
+                        <div className={InterestsStyles.background}></div>
+                        <div className={InterestsStyles.overlay}>
+                            <div className={InterestsStyles.titleDiv}>
+                                <span className={InterestsStyles.nameTitle}>
+                                    {labels.interests}
+                                </span>
+                            </div>
+                            <div className={InterestsStyles.interests}>
 
+                            </div>
                         </div>
                     </div>
                     <div className={InterestsStyles.section3}>
-                        <div className={InterestsStyles.interestsContinued}>
-                            
+                        <div className={InterestsStyles.overviewContinued}>
+                            <div className={InterestsStyles.overviewContinuedIcon}>
+                                <ImageCollage />
+                            </div>
+                            <div className={InterestsStyles.divider}></div>
+                            <span className={InterestsStyles.overviewContinuedDesc}>{labels.overviewContinuedDesc}</span>
                         </div>
-                        <SocialMediaIcon />
                     </div>
+                    <SocialMediaIcon />
                 </div>
             </div>
         );

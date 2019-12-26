@@ -1,8 +1,24 @@
 {
-    "title": "Manipal and Renuka Reddy",
-    "mentorshipOverviewTitle": "Mentorship",
-    "leadershipOverviewTitle": "Leadership Development",
+    "welcome": "Welcome.",
+    "name": "We are Manipal and Renuka Reddy.",
+    "focus": "Our Focus.",
+    "mentorshipOverviewTitle": "Life Mentorship.",
+    "leadershipOverviewTitle": "Leadership Development.",
+    "familyOverviewTitle": "Family.",
+    "impactOverviewTitle": "Impact.",
+    "freedomOverviewTitle": "Holistic Freedom.",
     "mentorshipOverviewDesc": "Insert description here...",
     "leadershipOverviewDesc": "Insert description here...",
-    "overviewContinuedDesc": "Insert description here..."
+    "familyOverviewDesc": "Insert description here...",
+    "impactOverviewDesc": "Insert description here...",
+    "freedomOverviewDesc": "Insert description here...",
+    "overviewContinuedDesc": "Insert description here...",
+    "about": "Who we are.",
+    "welcomeDesc": "Insert description here...",
+    "about_family": "Insert description here...",
+    "about_mentorship": "Insert description here...",
+    "about_leadership": "Insert description here...",
+    "about_freedom": "Insert description here...",
+    "about_impact": "Insert description here...",
+    "interests": "What we do."
 }

@@ -1,11 +1,13 @@
 import React from 'react';
-import { SocialMediaIcon, ArrowScrollable, Navigation } from '../../utils/export/exportModules';
+import { SocialMediaIcon, ArrowScrollable, Navigation, OverviewIcon } from '../../utils/export/exportModules';
 import { Helper } from '../../utils/export/exportHelpers';
-import { ContentStyles, IntroStyles } from '../../utils/export/exportStyles';
-import mentorship from '../images/overview/Mentorship.png';
-import leadership from '../images/overview/Leadership.png';
-import overviewcont from '../images/overviewcont.png';
+import { IntroStyles } from '../../utils/export/exportStyles';
 import labels from '../labels/Labels.json';
+
+// Props for Overview Module
+const overview = process.env.REACT_APP_OVERVIEW.split(',');
+const path = process.env.REACT_APP_ABOUT_PATH;
+
 
 export default class Intro extends React.Component {
     render() {
@@ -19,33 +21,22 @@ export default class Intro extends React.Component {
                     </div>
                     <div className={IntroStyles.section2}>
                         <div className={IntroStyles.titleDiv}>
-                            <text className={IntroStyles.nameTitle}>{labels.title}</text>
-                            <div className={IntroStyles.titleDivider}></div>
+                            <span className={IntroStyles.nameTitle}>
+                                {labels.welcome}<br/>{labels.name}
+                            </span>
                         </div>
-                        <div className={IntroStyles.overview}>
-                            <div className={IntroStyles.overviewIconContainer}>
-                                {/* <div className={IntroStyles.overviewIcon}> */}
-                                    <img className={IntroStyles.iconImage} src={mentorship} /><br/><br/>
-                                    <text className={IntroStyles.overviewTitle}>{labels.mentorshipOverviewTitle}</text>
-                                    {/* <text className={IntroStyles.overviewDesc}>{labels.mentorshipOverviewDesc}</text> */}
-                                {/* </div> */}
-                            </div>
-                            <div className={IntroStyles.overviewIconContainer}>
-                                {/* <div className={IntroStyles.overviewIcon}> */}
-                                    <img className={IntroStyles.iconImage} src={leadership} /><br/><br/>
-                                    <text className={IntroStyles.overviewTitle}>{labels.leadershipOverviewTitle}</text>
-                                    {/* <text className={IntroStyles.overviewDesc}>{labels.leadershipOverviewDesc}</text> */}
-                                {/* </div> */}
-                            </div>
+                        <div className={IntroStyles.descContainer} >
+                            {labels.welcomeDesc}
                         </div>
                     </div>
                     <div className={IntroStyles.section3}>
-                        <div className={IntroStyles.overviewContinued}>
-                            <div className={IntroStyles.overviewContinuedIcon}>
-                                <img src={overviewcont} height='300px' width='300px' />
-                            </div>
-                            <text className={IntroStyles.overviewContinuedDesc}>{labels.overviewContinuedDesc}</text>
-
+                        <div className={IntroStyles.titleDiv}>
+                            <span className={IntroStyles.nameTitle}>
+                                {labels.focus}
+                            </span>
+                        </div>
+                        <div className={IntroStyles.overview}>
+                            {overview.map((icon) => <OverviewIcon icon={icon} path={path} key={icon} />)}
                         </div>
                         <SocialMediaIcon />
                     </div>

@@ -1,5 +1,12 @@
+$imgHeight: 21px;
+$imgWidth: $imgHeight;
+$iconBorderRadius: 50%;
+$iconHeight: 40px;
+$iconWidth: $iconHeight;
+$iconMargin: 10px;
+$iconBkgnd: black;
+
 .socialMedia {
-    z-index: 2;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -11,29 +18,34 @@
 }
 
 .igIcon {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    background: black;
-    margin: 10px;
+    border-radius: $iconBorderRadius;
+    height: $iconHeight;
+    width: $iconWidth;
+    background: $iconBkgnd;
+    margin: $iconMargin;
 }
 
 .inIcon {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    background: black;
-    margin: 10px;
+    border-radius: $iconBorderRadius;
+    height: $iconHeight;
+    width: $iconWidth;
+    background: $iconBkgnd;
+    margin: $iconMargin;
 }
 
 .imgWrapper {
-    padding-top: 8.5px;
+    padding-top: 9.5px;
+}
+
+.imgClass {
+    height: $imgHeight;
+    width: $imgWidth;
 }
 
 
 /* Animations */
 .igIcon:hover {
-    background: rgba(182, 114, 214, 0.801);
+    background: rgba(175, 84, 218, 0.801);
 }
 
 .inIcon:hover {

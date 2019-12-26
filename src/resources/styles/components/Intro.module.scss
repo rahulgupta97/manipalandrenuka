@@ -12,45 +12,75 @@
 $sectionHeight: 100vh;
 $sectionWidth: 100%;
 $sectionPosition: relative;
+$webkitboxdisplay: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+$mozboxdisplay: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+$msflexboxdisplay: -ms-flexbox; /* TWEENER - IE 10 */
+$webkitflexdisplay: -webkit-flex; /* NEW - Chrome */
+$sectiondisplay: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+$flexdirection: column;
 
 .section1 {
     height: $sectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
 }
 
 .section2 {
     height: $sectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
-    background-color: #f3f5ef;
+    background: linear-gradient(#f3f5ef, rgb(214, 214, 214));
     text-align: center;
     font-family: Roboto;
-    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox; /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Chrome */
-    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -ms-flex-direction: column;
-    -moz-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
 }
 
 .section3 {
     height: $sectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
-    background-color: #b1cae7;
+    background: linear-gradient(rgb(214, 214, 214), rgba(2, 37, 134, 0.849));
     text-align: center;
     font-family: Roboto;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
 }
 
+
+$webkitboxflex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+$mozboxflex: 1; /* OLD - Firefox 19- */
+$webkitflex: 1; /* Chrome */
+$msflex: 1; /* IE 10 */
+$sectionflex: 1; /* NEW, */
 
 /* section-1 elements */
 
 .firstGlance {
-    background-image: url("../../images/firstGlance.jpg");
+    background-image: url("../../images/firstglance.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -63,168 +93,28 @@ $sectionPosition: relative;
 /* section-2 elements */
 
 .titleDiv {
-    padding: 3%;
+    padding: 5%;
 }
 
 .nameTitle {
-    font-size: 4em;
+    font-size: 6vh;
     font-weight: lighter;
 }
 
-.titleDivider {
-    width: 80px;
-    height: 2px;
-    background: black;
-    margin: 2% auto;
-}
-
-.overview {
-    display: flex;
-    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
-    -moz-box-flex: 1; /* OLD - Firefox 19- */
-    -webkit-flex: 1; /* Chrome */
-    -ms-flex: 1; /* IE 10 */
-    flex: 1; /* NEW, */
-}
-
-.overviewIconContainer {
-    height: auto;
-    width: 50%;
-}
-
-// .overviewIcon {
-//     padding-left: 150px;
-//     padding-right: 150px;
-// }
-
-.overviewTitle {
-    font-size: 2em;
-    font-weight: lighter;
-}
-
-.overviewDesc {
-    font-size: 1em;
+.descContainer {
+    width: 40%;
+    margin: 0 auto;
 }
 
 
 /* section-3 elements */
 
-.overviewContinued {
+.overview {
     display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    height: calc(100vh - 60px);
-
-    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox; /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Chrome */
-    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -ms-flex-direction: column;
-    -moz-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-}
-
-.overviewContinuedIcon {
-    width: 100%;
-    height: 300px;
-    // -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
-    // -moz-box-flex: 1; /* OLD - Firefox 19- */
-    // -webkit-flex: 1; /* Chrome */
-    // -ms-flex: 1; /* IE 10 */
-    // flex: 1; /* NEW, */
-}
-
-.overviewContinuedDesc {
-    padding-top: 50px;
-    font-size: 1em;
-}
-
-
-
-/* Animations */
-
-/* Enlarge icons on hover */
-
-$animationFromHeight: 250px;
-$animationToHeight: 350px;
-$animationFromWidth: $animationFromHeight;
-$animationToWidth: $animationToHeight;
-
-@keyframes enlargeIcon {
-    from {
-        height: $animationFromHeight;
-        width: $animationFromWidth;
-    }
-    to   {
-        height: $animationToHeight;
-        width: $animationToWidth;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes enlargeIcon {
-    from {
-        height: $animationFromHeight;
-        width: $animationFromWidth;
-    }
-    to   {
-        height: $animationToHeight;
-        width: $animationToWidth;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes enlargeIcon {
-    from {
-        height: $animationFromHeight;
-        width: $animationFromWidth;
-    }
-    to   {
-        height: $animationToHeight;
-        width: $animationToWidth;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes enlargeIcon {
-    from {
-        height: $animationFromHeight;
-        width: $animationFromWidth;
-    }
-    to   {
-        height: $animationToHeight;
-        width: $animationToWidth;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes enlargeIcon {
-    from {
-        height: $animationFromHeight;
-        width: $animationFromWidth;
-    }
-    to   {
-        height: $animationToHeight;
-        width: $animationToWidth;
-    }
-}
-
-
-$enlargeIcon: enlargeIcon 0.5s;
-
-
-.iconImage {
-    height: $animationFromHeight;
-    width: $animationFromWidth;
-}
-
-.iconImage:hover {
-    -webkit-animation: $enlargeIcon; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: $enlargeIcon; /* Firefox < 16 */
-    -ms-animation: $enlargeIcon; /* Internet Explorer */
-    -o-animation: $enlargeIcon; /* Opera < 12.1 */
-    animation: $enlargeIcon;
-    animation-fill-mode: forwards;
+    -webkit-box-flex: $webkitboxflex;
+    -moz-box-flex: $mozboxflex;
+    -webkit-flex: $webkitflex;
+    -ms-flex: $msflex;
+    flex: $sectionflex;
+    // padding-top: 50px;
 }

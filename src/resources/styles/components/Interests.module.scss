@@ -12,46 +12,153 @@
 $sectionHeight: 100vh;
 $sectionWidth: 100%;
 $sectionPosition: relative;
+$webkitboxdisplay: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+$mozboxdisplay: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+$msflexboxdisplay: -ms-flexbox; /* TWEENER - IE 10 */
+$webkitflexdisplay: -webkit-flex; /* NEW - Chrome */
+$sectiondisplay: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+$flexdirection: column;
+$backgroundImg: url("../../images/interests.jpg");
 
 .section1 {
     height: $sectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
 }
 
 .section2 {
     height: $sectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
-    background-color: #33ccff;
+    text-align: center;
+    align-items: center;
+    font-family: Roboto;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
 }
 
 .section3 {
     height: $sectionHeight;
     width: $sectionWidth;
     position: $sectionPosition;
-    background-color: #33ccff;
+    // background: linear-gradient(rgb(214, 214, 214), rgb(109, 209, 255));
+    text-align: center;
+    font-family: Roboto;
+    display: $webkitboxdisplay;
+    display: $mozboxdisplay;
+    display: $msflexboxdisplay;
+    display: $webkitflexdisplay;
+    display: $sectiondisplay;
+    -ms-flex-direction: $flexdirection;
+    -moz-flex-direction: $flexdirection;
+    -webkit-flex-direction: $flexdirection;
+    flex-direction: $flexdirection;
 }
+
+
+$webkitboxflex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+$mozboxflex: 1; /* OLD - Firefox 19- */
+$webkitflex: 1; /* Chrome */
+$msflex: 1; /* IE 10 */
+$sectionflex: 1; /* NEW, */
 
 
 /* section-1 elements */
 
 .firstGlance {
-
+    background-image: $backgroundImg;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 20%;
+    height: $sectionHeight;
+    width: $sectionWidth;
 }
 
 
 /* section-2 elements */
 
-.interests {
+$innerPosition: absolute;
+
+.background {
     height: $sectionHeight;
     width: $sectionWidth;
+    position: $innerPosition;
+    background-image: $backgroundImg;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 20%;
+    filter: blur(35px);
+}
+
+.overlay {
+    position: $innerPosition;
+    width: 50%;
+}
+
+.titleDiv {
+    padding: 3%;
+}
+
+.nameTitle {
+    font-size: 6vh;
+    font-weight: lighter;
+    color: white;
+}
+
+.interests {
+    // height: $sectionHeight;
+    // width: $sectionWidth;
 }
 
 
 /* section-3 elements */
 
-.interestsContinued {
-    height: $sectionHeight;
-    width: $sectionWidth;
+.overviewContinued {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 100%;
+    -webkit-box-flex: $webkitboxflex;
+    -moz-box-flex: $mozboxflex;
+    -webkit-flex: $webkitflex;
+    -ms-flex: $msflex;
+    flex: $sectionflex;
+}
+
+.overviewContinuedIcon {
+    width: 49%;
+    flex-grow: 1;
+}
+
+.divider {
+    width: 0.08%;
+    height: 50vh;
+    background-color: #333;
+    opacity: 0.3;
+    flex-grow: 0;
+}
+
+.overviewContinuedDesc {
+    width: 49%;
+    font-size: 1em;
+    flex-grow: 1;
 }

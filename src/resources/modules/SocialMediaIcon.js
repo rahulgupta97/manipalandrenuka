@@ -1,26 +1,34 @@
 import React from 'react';
 import { SocialMediaIconStyles } from '../../utils/export/exportStyles';
-import linkedin from '../images/socialMedia/linkedin.png';
-import instagram from '../images/socialMedia/instagram.png';
+import { media } from '../../utils/export/exportMedia';
 
-export default class Navigation extends React.Component {
+
+const socialMedia = [
+    {
+        name: "instagram",
+        iconStyle: SocialMediaIconStyles.igIcon,
+        path: process.env.REACT_APP_INSTAGRAM
+    },
+    {
+        name: "linkedin",
+        iconStyle: SocialMediaIconStyles.inIcon,
+        path: process.env.REACT_APP_LINKEDIN
+    }
+];
+
+export default class SocialMediaIcon extends React.Component {
     render() {
         return (
             <div className={SocialMediaIconStyles.socialMedia}>
-                <div className={SocialMediaIconStyles.igIcon}>
-                    <a href={process.env.REACT_APP_INSTAGRAM}>
-                        <div className={SocialMediaIconStyles.imgWrapper}>
-                            <img src={instagram} height='21px' width='21px' />
-                        </div>
-                    </a>
-                </div>
-                <div className={SocialMediaIconStyles.inIcon}>
-                    <a href={process.env.REACT_APP_LINKEDIN}>
-                        <div className={SocialMediaIconStyles.imgWrapper}>
-                            <img src={linkedin} />
-                        </div>
-                    </a>
-                </div>
+                {socialMedia.map((platform) => 
+                    <div className={platform.iconStyle} key={platform.name} >
+                        <a href={platform.path}>
+                            <div className={SocialMediaIconStyles.imgWrapper}>
+                                <img className={SocialMediaIconStyles.imgClass} src={media[platform.name]} alt="" />
+                            </div>
+                        </a>
+                    </div>
+                )}
             </div>
         );
     }

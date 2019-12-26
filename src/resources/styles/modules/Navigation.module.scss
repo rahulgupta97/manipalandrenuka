@@ -14,7 +14,6 @@
 .button {
     padding-left: 40px;
     padding-right: 40px;
-    text-decoration: none;
     font-family: Roboto;
     color: white;
     opacity: 0.5;
@@ -23,6 +22,7 @@
 .button:hover {
     color: white;
     opacity: 1;
+    cursor: pointer;
 }
 
 .disabled {

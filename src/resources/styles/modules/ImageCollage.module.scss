@@ -1,0 +1,14 @@
+$iconMainImgSize: 25%;
+$iconImgShadow: inset 0 0 25px 25px #fff;
+
+.iconImg {
+    height: $iconMainImgSize;
+    width: $iconMainImgSize;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: $iconImgShadow;
+    -webkit-box-shadow: $iconImgShadow;
+    -moz-box-shadow: $iconImgShadow;
+    -ms-box-shadow: $iconImgShadow;
+    -o-box-shadow: $iconImgShadow;
+}

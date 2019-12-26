@@ -1,7 +1,15 @@
 import React from 'react';
 import { SocialMediaIcon, ArrowScrollable, Navigation } from '../../utils/export/exportModules';
 import { Helper } from '../../utils/export/exportHelpers';
-import { ContentStyles, AboutStyles } from '../../utils/export/exportStyles';
+import { AboutStyles } from '../../utils/export/exportStyles';
+import { media } from '../../utils/export/exportMedia';
+import labels from '../labels/Labels.json';
+
+const overview = process.env.REACT_APP_OVERVIEW.split(',');
+const aboutIcons = [];
+overview.forEach((icon) => {
+    aboutIcons.push(`about_${icon}`);
+});
 
 export default class About extends React.Component {
     render() {
@@ -14,16 +22,24 @@ export default class About extends React.Component {
                         <ArrowScrollable />
                     </div>
                     <div className={AboutStyles.section2}>
-                        <div className={AboutStyles.bio_mr}>
-                            
+                        <div className={AboutStyles.titleDiv}>
+                            <span className={AboutStyles.nameTitle}>
+                                {labels.about}
+                            </span>
+                        </div>
+                        <div className={AboutStyles.aboutIcons}>
+                            {aboutIcons.map((aboutIcon) => 
+                                <div className={AboutStyles.aboutIconContainer}>
+                                    <img className={AboutStyles.aboutIconImg}
+                                         src={media[aboutIcon]}
+                                         alt=""
+                                    />
+                                    <span className={AboutStyles.aboutIconDesc}>{labels[aboutIcon]}</span>
+                                </div>
+                            )}
                         </div>
                     </div>
-                    <div className={AboutStyles.section3}>
-                        <div className={AboutStyles.bio_rr}>
-                            
-                        </div>
-                        <SocialMediaIcon />
-                    </div>
+                    <SocialMediaIcon />
                 </div>
             </div>
         );

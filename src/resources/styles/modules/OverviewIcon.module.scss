@@ -1,0 +1,53 @@
+.overviewIconContainer {
+    height: auto;
+    width: 20%;
+    display: block;
+}
+
+.overviewTitle {
+    margin-top: 25px;
+    font-size: 2em;
+    font-weight: lighter;
+    display: block;
+}
+
+.overviewDesc {
+    margin-top: 50px;
+    font-size: 1em;
+    display: block;
+    visibility: hidden;
+}
+
+.overviewDescHover {
+    visibility: visible;
+}
+
+
+/* Animations */
+
+/* Enlarge icons on hover */
+
+$iconHeight: 180px;
+$iconWidth: $iconHeight;
+
+$iconImgShadow: 0 0 3px 3px rgb(191, 208, 252);
+$iconImgShadowHover: 0 0 10px 2px #00ffb3;
+
+.iconImage {
+    height: $iconHeight;
+    width: $iconWidth;
+    border-radius: 50%;
+    box-shadow: $iconImgShadow;
+    -webkit-box-shadow: $iconImgShadow;
+    -moz-box-shadow: $iconImgShadow;
+    -ms-box-shadow: $iconImgShadow;
+    -o-box-shadow: $iconImgShadow;
+}
+
+.iconImageHover {
+    box-shadow: $iconImgShadowHover;
+    -webkit-box-shadow: $iconImgShadowHover;
+    -moz-box-shadow: $iconImgShadowHover;
+    -ms-box-shadow: $iconImgShadowHover;
+    -o-box-shadow: $iconImgShadowHover;
+}
